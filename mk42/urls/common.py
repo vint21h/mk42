@@ -11,7 +11,6 @@ from django.conf.urls import url
 from django.conf.urls.i18n import i18n_patterns
 
 from rest_framework.authtoken.views import obtain_auth_token
-from rest_framework.schemas import get_schema_view
 
 
 urlpatterns = []
@@ -41,13 +40,10 @@ urlpatterns += i18n_patterns(
 )
 
 # mk42 urls patterns
-urlpatterns += [
-    url(r"^$", get_schema_view(title="API")),
-]
+urlpatterns += []
 
 # mk42 i18n urls patterns
 urlpatterns += i18n_patterns(
     url(r"^users/", include("mk42.apps.users.urls", namespace="users", app_name="users")),  # users app
     url(r"^core/", include("mk42.apps.core.urls", namespace="core", app_name="core")),  # core app
-    url(r"^$", get_schema_view(title="API")),
 )

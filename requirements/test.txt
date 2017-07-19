@@ -1,7 +1,0 @@
-# mk42
-# requirements/test.txt
-
--r common.txt
-
-uwsgi==2.0.15
-psycopg2==2.7.1

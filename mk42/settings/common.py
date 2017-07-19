@@ -19,16 +19,52 @@ from mk42.version import (
 )
 
 
-# read credentials from file
-env = environ.Env()
-env.read_env(env_file=".credentials")
-
 NAME = "mk42"
 ENVIRONMENT = ""
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))).replace("\\", "/")
 sys.path.insert(0, BASE_DIR)
 
+# read credentials from file
+env = environ.Env()
+env.read_env(env_file=os.path.join(BASE_DIR, ".credentials"))
+
 SECRET_KEY = env("SECRET_KEY")
+
+# for old django and django reusable applications config fix
+DATABASE_ENGINE = env.db().get("ENGINE").split(".")[-1]
+DATABASE_NAME = env.db().get("NAME")
+DATABASE_USER = env.db().get("USER")
+DATABASE_PASSWORD = env.db().get("PASSWORD")
+DATABASE_HOST = env.db().get("HOST")
+DATABASE_PORT = env.db().get("PORT")
+
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.{engine}".format(**{"engine": DATABASE_ENGINE, }),
+        "NAME": DATABASE_NAME,
+        "USER": DATABASE_USER,
+        "PASSWORD": DATABASE_PASSWORD,
+        "HOST": DATABASE_HOST,
+        "PORT": DATABASE_PORT,
+    },
+}
+
+# cache
+CACHES = {
+    "default": env.cache(),
+}
+
+# redis settings
+REDIS_DB = env.dict("REDIS_URL").get("db")
+REDIS_PASSWORD = env.dict("REDIS_URL").get("password")
+REDIS_HOST = env.dict("REDIS_URL").get("host")
+REDIS_PORT = env.dict("REDIS_URL").get("port")
+REDIS_CONNECTION = {
+    "db": REDIS_DB,
+    "host": REDIS_HOST,
+    "port": REDIS_PASSWORD,
+    "password": REDIS_PASSWORD,
+}
 
 # apps
 INSTALLED_APPS = [
@@ -161,6 +197,7 @@ DJCOPYRIGHT_START_YEAR = 2017
 
 # celery settings
 djcelery.setup_loader()
+BROKER_URL = env("BROKER_URL")
 CELERY_BACKEND = "amqp"
 CELERY_SEND_TASK_ERROR_EMAILS = True
 CELERYD_MAX_TASKS_PER_CHILD = 5
@@ -189,6 +226,13 @@ CELERY_ROUTES = {
 
 # email settings
 EMAIL_BACKEND = "mk42.lib.utils.backends.email.CeleryTemplateEmailBackend"
+EMAIL_HOST = env.email_url().get("EMAIL_HOST")
+EMAIL_PORT = env.email_url().get("EMAIL_PORT")
+EMAIL_HOST_USER = env.email_url().get("EMAIL_HOST_USER")
+EMAIL_HOST_PASSWORD = env.email_url().get("EMAIL_HOST_PASSWORD")
+EMAIL_USE_TLS = env.email_url().get("EMAIL_USE_TLS")
+DEFAULT_FROM_EMAIL = env.email_url().get("OPTIONS").get("DEFAULT_FROM_EMAIL")
+DEFAULT_FROM_EMAIL_SENDER = env.email_url().get("OPTIONS").get("DEFAULT_FROM_EMAIL_SENDER")
 CELERY_EMAIL_TASK_CONFIG = {
     "queue": "email",
     "rate_limit": "30/m",
@@ -242,3 +286,21 @@ ROBOTS_USE_SITEMAP = True
 
 # cors settings
 CORS_URLS_REGEX = r"/.*?/api/.*?$"
+
+# default protocol
+URL_PROTOCOL = "http:"
+
+# thumbnails settings
+THUMBNAIL_KVSTORE = "sorl.thumbnail.kvstores.redis_kvstore.KVStore"
+THUMBNAIL_REDIS_DB = REDIS_DB
+THUMBNAIL_REDIS_PASSWORD = REDIS_PASSWORD
+THUMBNAIL_REDIS_HOST = REDIS_HOST
+THUMBNAIL_REDIS_PORT = REDIS_PORT
+
+# session settings
+SESSION_REDIS_HOST = REDIS_HOST
+SESSION_REDIS_PORT = REDIS_PORT
+SESSION_REDIS_DB = REDIS_DB
+SESSION_REDIS_PASSWORD = REDIS_PASSWORD
+SESSION_REDIS_PREFIX = "session"
+SESSION_REDIS_SOCKET_TIMEOUT = 1

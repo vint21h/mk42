@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 # mk42
-# mk42/apps/core/api/permissions/membership.py
+# mk42/apps/core/api/permissions/rsvp.py
 
 from __future__ import unicode_literals
 
@@ -14,19 +14,17 @@ from rest_framework.compat import is_authenticated
 from mk42.constants import (
     POST,
     DELETE,
-    PATCH,
 )
-from mk42.apps.core.models.membership import Membership
 
 
 __all__ = [
-    "MembershipPermissions",
+    "RSVPPermissions",
 ]
 
 
-class MembershipPermissions(BasePermission):
+class RSVPPermissions(BasePermission):
     """
-    Membership permissions.
+    RSVP permissions.
     """
 
     def has_permission(self, request, view):
@@ -36,7 +34,7 @@ class MembershipPermissions(BasePermission):
         :param request: django request instance.
         :type request: django.http.request.HttpRequest.
         :param view: view set.
-        :type view: mk42.apps.core.api.viewsets.membership.MembershipViewset.
+        :type view: mk42.apps.core.api.viewsets.rsvp.RSVPViewset.
         :return: permission is granted.
         :rtype: bool.
         """
@@ -46,15 +44,11 @@ class MembershipPermissions(BasePermission):
             return True
 
         if all([request.method == POST, is_authenticated(request.user), ]):
-            # Allow join to groups only for authenticated users.
+            # Allow join to event only for authenticated users.
             return True
 
-        if all([request.method == DELETE, is_authenticated(request.user), ]):
-            # In futures steps of flow allow user delete own membership.
-            return True
-
-        if all([request.method == PATCH, is_authenticated(request.user), ]):
-            # In futures steps of flow allow owner of group to activate membership
+        if request.method == DELETE:
+            # In futures steps of flow allow user delete own RSVP.
             return True
 
     def has_object_permission(self, request, view, obj):
@@ -64,19 +58,15 @@ class MembershipPermissions(BasePermission):
         :param request: django request instance.
         :type request: django.http.request.HttpRequest.
         :param view: view set.
-        :type view: mk42.apps.core.api.viewsets.membership.MembershipViewset.
-        :param obj: membership model instance.
-        :type obj: mk42.apps.core.models.membership.Membership.
+        :type view: mk42.apps.core.api.viewsets.event.EventViewSet.
+        :param obj: group model instance.
+        :type obj: mk42.apps.core.models.event.Event.
         :return: permission is granted.
         :rtype: bool.
         """
 
         if all([obj.user == request.user, request.method == DELETE, ]):
-            # Allow to delete only self-owned membership.
-            return True
-
-        if all([request.method == PATCH, request.user == obj.group.owner, ]):
-            # Allow only membership group owner edit user membership (activate it).
+            # Allow only delete RSVP.
             return True
 
         if request.method in SAFE_METHODS:

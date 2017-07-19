@@ -1,0 +1,47 @@
+{# mk42 #}
+{# mk42/apps/users/templates/templated_email/registration.email #}
+
+{% load i18n %}
+
+{% block subject %}{% trans "Registration on" %} - {{ protocol }}//{{ site.domain }}{% endblock %}
+
+{% block plain %}
+
+    {% trans "Welcome to" %} {{ site.name }}!
+
+    {% trans "You, or somebody else register at" %} {{ protocol }}//{{ site.domain }}
+
+    {% trans "If you do not do this please inform us." %}
+
+    {% trans "Enjoy working on" %} {{ protocol }}//{{ site.domain }}
+
+    {% trans "Yours" %},
+
+    {% trans "The" %} {{ site.name }} {% trans "team" %}
+
+{% endblock %}
+
+{% block html %}
+
+    <html>
+        <body>
+            <h1>
+                {% trans "Welcome to" %} {{ site.name }}!
+            </h1>
+
+            <p>
+                {% trans "You, or somebody else register at" %} <a href="{{ protocol }}//{{ site.domain }}">{{ site.name }}</a>.
+
+                {% trans "If you do not do this please inform us." %}
+
+                {% trans "Enjoy working on" %} <a href="{{ protocol }}//{{ site.domain }}">{{ site.name }}</a>.
+            </p>
+            <p>
+                {% trans "Yours" %},
+
+                {% trans "The" %} {{ site.name }} {% trans "team" %}
+            </p>
+        </body>
+    </html>
+
+{% endblock %}

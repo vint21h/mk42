@@ -49,3 +49,6 @@ update-geoip-db:
 
 docs:
 	rst2html README.rst > tmp/index.html && zip tmp/docs.zip tmp/index.html
+
+mail-server:
+	../dev-scp/mail-server.sh

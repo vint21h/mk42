@@ -24,7 +24,37 @@ class GroupAdmin(admin.ModelAdmin):
     search_fields = ["id", "name", ]
     date_hierarchy = "created"
     readonly_fields = ["created", "updated", ]
+    list_editable = ["active", ]
+    actions = ["activate", ]
     fieldsets = (
         [None, {"fields": ["name", "owner", "description", ], }, ],
         [_("Other"), {"fields": ["created", "updated", "active", "slug", ], }, ],
     )
+
+    def activate(self, request, queryset):
+        """
+        Make all selected groups active.
+
+        :param request: django request instance.
+        :type request: django.http.request.HttpRequest.
+        :param queryset: queryset with selected groups.
+        :type queryset: django.db.models.query.QuerySet.
+        """
+
+        queryset.update(active=True)
+
+    activate.short_description = _("Activate selected groups")
+
+    def deactivate(self, request, queryset):
+        """
+        Deactivate all selected groups.
+
+        :param request: django request instance.
+        :type request: django.http.request.HttpRequest.
+        :param queryset: queryset with selected groups.
+        :type queryset: django.db.models.query.QuerySet.
+        """
+
+        queryset.update(active=False)
+
+    deactivate.short_description = _("Deactivate selected groups")

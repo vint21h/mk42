@@ -1,44 +1,44 @@
 # -*- coding: utf-8 -*-
 
 # mk42
-# mk42/apps/core/managers/group.py
+# mk42/apps/core/managers/membership.py
 
 from __future__ import unicode_literals
 
 from django.db import models
 
-from mk42.apps.core.querysets.group import GroupQuerySet
+from mk42.apps.core.querysets.membership import MembershipQuerySet
 
 
 __all__ = [
-    "GroupManager",
+    "MembershipManager",
 ]
 
 
-class GroupManager(models.Manager):
+class MembershipManager(models.Manager):
     """
-    Group model manager.
+    Membership model manager.
     """
 
     def get_queryset(self):
         """
         Override to return custom queryset.
 
-        :return: Group model queryset instance.
-        :rtype: mk42.apps.core.querysets.group.GroupQuerySet.
+        :return: Membership model queryset instance.
+        :rtype: mk42.apps.core.querysets.membership.MembershipQuerySet.
         """
 
-        return GroupQuerySet(self.model, using=self._db)
+        return MembershipQuerySet(self.model, using=self._db)
 
     def active(self, *args, **kwargs):
         """
-        Return active groups.
+        Return active memberships.
 
         :param args: additional args.
         :type args: list.
         :param kwargs: additional args.
         :type kwargs: dict.
-        :return: queryset with active groups.
+        :return: queryset with active memberships.
         :rtype: django.db.models.query.QuerySet.
         """
 
@@ -46,13 +46,13 @@ class GroupManager(models.Manager):
 
     def inactive(self, *args, **kwargs):
         """
-        Return inactive groups.
+        Return inactive memberships.
 
         :param args: additional args.
         :type args: list.
         :param kwargs: additional args.
         :type kwargs: dict.
-        :return: queryset with inactive groups.
+        :return: queryset with inactive memberships.
         :rtype: django.db.models.query.QuerySet.
         """
 

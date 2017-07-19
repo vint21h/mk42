@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 # mk42
-# mk42/apps/core/querysets/groups.py
+# mk42/apps/core/querysets/membership.py
 
 from __future__ import unicode_literals
 
@@ -9,24 +9,24 @@ from django.db import models
 
 
 __all__ = [
-    "GroupQuerySet",
+    "MembershipQuerySet",
 ]
 
 
-class GroupQuerySet(models.QuerySet):
+class MembershipQuerySet(models.QuerySet):
     """
-    Group model queryset.
+    Membership model queryset.
     """
 
     def active(self, *args, **kwargs):
         """
-        Return active groups.
+        Return active membership.
 
         :param args: additional args.
         :type args: list.
         :param kwargs: additional args.
         :type kwargs: dict.
-        :return: queryset with active groups.
+        :return: queryset with active memberships.
         :rtype: django.db.models.query.QuerySet.
         """
 
@@ -34,13 +34,13 @@ class GroupQuerySet(models.QuerySet):
 
     def inactive(self, *args, **kwargs):
         """
-        Return inactive groups.
+        Return inactive membership.
 
         :param args: additional args.
         :type args: list.
         :param kwargs: additional args.
         :type kwargs: dict.
-        :return: queryset with inactive groups.
+        :return: queryset with inactive memberships.
         :rtype: django.db.models.query.QuerySet.
         """
 

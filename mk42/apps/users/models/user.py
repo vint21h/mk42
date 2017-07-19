@@ -7,16 +7,25 @@ from __future__ import unicode_literals
 import uuid
 
 from django.contrib.auth.models import AbstractUser
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import (
+    activate,
+    get_language,
+    ugettext_lazy as _,
+)
 from django.db import models
 from django.contrib.sessions.models import Session
 from django.conf import settings
+from django.contrib.sites.models import Site
+from django.db.models.signals import post_save
+
+from templated_email import send_templated_mail
 
 from avatar.templatetags.avatar_tags import avatar_url
 from django_countries.fields import CountryField
 from rest_framework.authtoken.models import Token
 
 from mk42.apps.users.managers.user import UserManager
+from mk42.apps.users.signals.user import post_save_user
 
 
 __all__ = [
@@ -74,3 +83,56 @@ class User(AbstractUser):
         """
 
         return avatar_url(self)
+
+    @property
+    def email_context(self):
+        """
+        Return user emails default context.
+
+        :return: default context for user emails.
+        :rtype: dict.
+        """
+
+        return {
+            "user": self,
+            "site": Site.objects.get_current(),
+            "FROM_EMAIL": settings.DEFAULT_FROM_EMAIL,
+            "FROM_EMAIL_SENDER": settings.DEFAULT_FROM_EMAIL_SENDER,
+            "FROM": "{sender} <{email}>".format(**{
+                "sender": settings.DEFAULT_FROM_EMAIL_SENDER,
+                "email": settings.DEFAULT_FROM_EMAIL,
+            }),
+            "protocol": settings.URL_PROTOCOL,
+        }
+
+    def send_email(self, template, context):
+        """
+        Send email to user.
+
+        :param template: email template.
+        :type template: unicode.
+        :param context: email context.
+        :type context: dict.
+        """
+
+        context.update(self.email_context)  # update email context by some default values
+        language = get_language()  # remember current language (sometimes it's useful)
+        activate(self.language)
+        send_templated_mail(
+            template_name=template,
+            from_email=context.get("FROM", settings.DEFAULT_FROM_EMAIL),
+            recipient_list=[self.email, ],
+            context=context,
+        )
+        activate(language)
+
+    def send_registration_email(self):
+        """
+        Send registration email to user.
+        """
+
+        self.send_email("registration", {})
+
+
+# register signals
+post_save.connect(post_save_user, sender=User)

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mk42\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-19 20:41+0000\n"
+"POT-Creation-Date: 2017-07-18 21:36+0000\n"
 "PO-Revision-Date: 2017-06-13 19:25+0000\n"
 "Last-Translator: Alexei Andrushievich <vint21h@vint21h.pp.ua>\n"
 "Language-Team: Alexei Andrushievich <vint21h@vint21h.pp.ua>\n"
@@ -17,20 +17,66 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: admin/group.py:29 admin/membership.py:28
+#: admin/event.py:29 admin/group.py:31 admin/membership.py:29 admin/rsvp.py:28
 msgid "Other"
+msgstr ""
+
+#: admin/group.py:46
+msgid "Activate selected groups"
+msgstr ""
+
+#: admin/group.py:60
+msgid "Deactivate selected groups"
+msgstr ""
+
+#: admin/membership.py:44
+msgid "Activate selected memberships"
+msgstr ""
+
+#: admin/membership.py:58
+msgid "Deactivate selected memberships"
 msgstr ""
 
 #: apps.py:23
 msgid "Core"
 msgstr ""
 
-#: models/group.py:31 models/membership.py:24
+#: models/event.py:29 models/group.py:31 models/membership.py:25
+#: models/rsvp.py:24
 msgid "ID"
 msgstr ""
 
-#: models/group.py:32
+#: models/event.py:30 models/group.py:32
 msgid "name"
+msgstr ""
+
+#: models/event.py:31 models/group.py:35
+msgid "description"
+msgstr ""
+
+#: models/event.py:32 models/group.py:45 models/membership.py:27
+msgid "group"
+msgstr ""
+
+#: models/event.py:33
+msgid "address"
+msgstr ""
+
+#: models/event.py:34 models/event.py:36
+msgid "start date/time"
+msgstr ""
+
+#: models/event.py:35 models/group.py:36 models/membership.py:28
+#: models/rsvp.py:27
+msgid "created date/time"
+msgstr ""
+
+#: models/event.py:43 models/rsvp.py:26
+msgid "event"
+msgstr ""
+
+#: models/event.py:44
+msgid "events"
 msgstr ""
 
 #: models/group.py:33
@@ -45,34 +91,26 @@ msgstr ""
 msgid "owner"
 msgstr ""
 
-#: models/group.py:35
-msgid "description"
-msgstr ""
-
-#: models/group.py:36 models/membership.py:27
-msgid "created date/time"
-msgstr ""
-
 #: models/group.py:37
 msgid "updated date/time"
 msgstr ""
 
-#: models/group.py:38
+#: models/group.py:38 models/membership.py:29
 msgid "active"
-msgstr ""
-
-#: models/group.py:45 models/membership.py:26
-msgid "group"
 msgstr ""
 
 #: models/group.py:46
 msgid "groups"
 msgstr ""
 
-#: models/membership.py:25
+#: models/membership.py:26 models/rsvp.py:25
 msgid "user"
 msgstr ""
 
-#: models/membership.py:32 models/membership.py:33
+#: models/membership.py:36 models/membership.py:37
 msgid "membership"
+msgstr ""
+
+#: models/rsvp.py:33 models/rsvp.py:34
+msgid "rsvp"
 msgstr ""

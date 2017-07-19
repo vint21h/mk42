@@ -29,4 +29,4 @@ def post_save_group(sender, instance, created, **kwargs):
 
     if created:
 
-        Membership.objects.get_or_create(user=instance.owner, group=instance)
+        Membership.objects.get_or_create(user=instance.owner, group=instance, active=True)

@@ -14,6 +14,7 @@ from rest_framework.response import Response
 from mk42.apps.core.models.membership import Membership
 from mk42.apps.core.api.serializers.membership import MembershipSerializer
 from mk42.apps.core.api.permissions.membership import MembershipPermissions
+from mk42.apps.core.api.filters.membership import MembershipFilter
 from mk42.lib.utils.pagination import ExtendedPageNumberPagination
 from mk42.constants import GET
 
@@ -35,8 +36,9 @@ class MembershipViewSet(ModelViewSet):
         OrderingFilter,
     ]
     pagination_class = ExtendedPageNumberPagination
+    filter_class = MembershipFilter
     permission_classes = [MembershipPermissions, ]
-    filter_fields = ["user", "group", ]
+    filter_fields = ["user", "group", "active", ]
     ordering_fields = ["created", ]
 
     def perform_create(self, serializer):
@@ -67,6 +69,56 @@ class MembershipViewSet(ModelViewSet):
         """
 
         queryset = self.filter_queryset(queryset=Membership.objects.filter(user=request.user))
+        page = self.paginate_queryset(queryset)
+
+        if page is not None:
+            serializer = self.get_serializer(page, many=True)
+
+            return self.get_paginated_response(serializer.data)
+
+        serializer = self.get_serializer(queryset, many=True)
+
+        return Response(serializer.data)
+
+    @list_route(methods=[GET, ])
+    def active(self, request, **kwargs):
+        """
+        Return only active memberships.
+
+        :param request: django request instance.
+        :type request: django.http.request.HttpRequest.
+        :param kwargs: additional args.
+        :type kwargs: dict.
+        :return: serialized custom queryset response.
+        :rtype: rest_framework.response.Response.
+        """
+
+        queryset = self.filter_queryset(queryset=Membership.objects.active())
+        page = self.paginate_queryset(queryset)
+
+        if page is not None:
+            serializer = self.get_serializer(page, many=True)
+
+            return self.get_paginated_response(serializer.data)
+
+        serializer = self.get_serializer(queryset, many=True)
+
+        return Response(serializer.data)
+
+    @list_route(methods=[GET, ])
+    def inactive(self, request, **kwargs):
+        """
+        Return only inactive memberships.
+
+        :param request: django request instance.
+        :type request: django.http.request.HttpRequest.
+        :param kwargs: additional args.
+        :type kwargs: dict.
+        :return: serialized custom queryset response.
+        :rtype: rest_framework.response.Response.
+        """
+
+        queryset = self.filter_queryset(queryset=Membership.objects.inactive())
         page = self.paginate_queryset(queryset)
 
         if page is not None:

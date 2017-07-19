@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mk42\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-19 20:41+0000\n"
+"POT-Creation-Date: 2017-07-18 21:36+0000\n"
 "PO-Revision-Date: 2017-06-13 19:25+0000\n"
 "Last-Translator: Alexei Andrushievich <vint21h@vint21h.pp.ua>\n"
 "Language-Team: Alexei Andrushievich <vint21h@vint21h.pp.ua>\n"
@@ -47,7 +47,7 @@ msgstr ""
 msgid "short name"
 msgstr ""
 
-#: api/serializers/user.py:28 models/user.py:33
+#: api/serializers/user.py:28 models/user.py:43
 msgid "country"
 msgstr ""
 
@@ -55,18 +55,57 @@ msgstr ""
 msgid "Users"
 msgstr ""
 
-#: models/user.py:31
+#: models/user.py:41
 msgid "ID"
 msgstr ""
 
-#: models/user.py:32
+#: models/user.py:42
 msgid "language"
 msgstr ""
 
-#: models/user.py:48
+#: models/user.py:58
 msgid "user"
 msgstr ""
 
-#: models/user.py:49
+#: models/user.py:59
 msgid "users"
+msgstr ""
+
+#: templates/templated_email/registration.email:6
+msgid "Registration on"
+msgstr ""
+
+#: templates/templated_email/registration.email:10
+#: templates/templated_email/registration.email:29
+msgid "Welcome to"
+msgstr ""
+
+#: templates/templated_email/registration.email:12
+#: templates/templated_email/registration.email:33
+msgid "You, or somebody else register at"
+msgstr ""
+
+#: templates/templated_email/registration.email:14
+#: templates/templated_email/registration.email:35
+msgid "If you do not do this please inform us."
+msgstr ""
+
+#: templates/templated_email/registration.email:16
+#: templates/templated_email/registration.email:37
+msgid "Enjoy working on"
+msgstr ""
+
+#: templates/templated_email/registration.email:18
+#: templates/templated_email/registration.email:40
+msgid "Yours"
+msgstr ""
+
+#: templates/templated_email/registration.email:20
+#: templates/templated_email/registration.email:42
+msgid "The"
+msgstr ""
+
+#: templates/templated_email/registration.email:20
+#: templates/templated_email/registration.email:42
+msgid "team"
 msgstr ""

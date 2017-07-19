@@ -48,7 +48,7 @@ class GroupPermissions(BasePermission):
             # Allow create groups only for authenticated users.
             return True
 
-        if request.method == PATCH:
+        if all([request.method == PATCH, is_authenticated(request.user), ]):
             # In futures steps of flow allow user edit self owned groups.
             return True
 
@@ -66,8 +66,8 @@ class GroupPermissions(BasePermission):
         :rtype: bool.
         """
 
-        if obj.owner == request.user:
-            # Allow only owner edit objects.
+        if all([request.method == PATCH, obj.owner == request.user, ]):
+            # Allow only owner edit groups.
             return True
 
         if request.method == DELETE:

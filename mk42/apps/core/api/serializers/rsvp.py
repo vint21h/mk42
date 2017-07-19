@@ -1,39 +1,38 @@
 # -*- coding: utf-8 -*-
 
 # mk42
-# mk42/apps/core/api/serializers/membership.py
+# mk42/apps/core/api/serializers/rsvp.py
 
 from __future__ import unicode_literals
 
 from rest_framework import serializers
 
-from mk42.apps.core.models.membership import Membership
+from mk42.apps.core.models.rsvp import RSVP
 
 
 __all__ = [
-    "MembershipSerializer",
+    "RSVPSerializer",
 ]
 
 
-class MembershipSerializer(serializers.ModelSerializer):
+class RSVPSerializer(serializers.ModelSerializer):
     """
-    Membership serializer.
+    RSVP serializer.
     """
 
     class Meta:
 
-        model = Membership
+        model = RSVP
         read_only_fields = [
             "created",
         ]
         extra_kwargs = {
-            "url": {"view_name": "core:membership-detail", },
+            "url": {"view_name": "core:rsvp-detail", },
         }
         fields = [
             "id",
             "user",
-            "group",
+            "event",
             "created",
-            "active",
             "url",
         ]
