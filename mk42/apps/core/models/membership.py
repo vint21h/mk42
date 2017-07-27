@@ -9,7 +9,9 @@ import uuid
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from django.conf import settings
+from django.db.models.signals import post_save
 from mk42.apps.core.managers.membership import MembershipManager
+from mk42.apps.core.signals.membership import post_save_membership
 
 
 __all__ = [
@@ -47,3 +49,23 @@ class Membership(models.Model):
     def __str__(self):
 
         return self.__unicode__()
+
+
+    def send_request_membership_email(self):
+        """
+        Send the notification email to the user after request membership to the group.
+        """
+
+        self.user.send_email("request_membership_email", {"membership": self, })
+
+    def approve_request_membership_email(self):
+        """
+        Send the notification email to the user after approving request membership to the group.
+        """
+
+        if self.user.active == True:
+
+            self.user.send_email("approve_membership_email", {"membership": self, })
+
+# send notification
+post_save.connect(post_save_membership, sender=Membership)

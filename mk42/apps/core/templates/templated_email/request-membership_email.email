@@ -1,0 +1,45 @@
+{# mk42 #}
+{# mk42/apps/core/templates/templated_email/group_registration.email #}
+
+{% load i18n %}
+
+{% block subject %}{% trans "Approving membership at" %} {{ protocol }}//{{ site.domain }}{% endblock %}
+
+{% block plain %}
+
+    {% trans "Hello!" %}
+
+    {% trans "You made a request to the group" %} {{ membership.group }} {% trans "at" %} {{ protocol }}//{{ site.domain }}
+
+    {% trans "Please, wait for approval" %}
+
+    {% trans "Yours" %},
+
+    {% trans "The" %} {{ site.name }} {% trans "team" %}
+
+{% endblock %}
+
+{% block html %}
+
+    <html>
+        <body>
+            <h1>
+                {% trans "Hello!" %}
+            </h1>
+
+            <p>
+                {% trans "You made a request to the group" %}  {{ membership.group }}{% trans "at" %} <a href="{{ protocol }}//{{ site.domain }}">{{ site.name }}</a>.
+
+                {% trans "Please, wait for approval" %}
+
+                {% trans "If you do not do this please inform us." %}
+            </p>
+            <p>
+                {% trans "Yours" %},
+
+                {% trans "The" %} {{ site.name }} {% trans "team" %}
+            </p>
+        </body>
+    </html>
+
+{% endblock %}
