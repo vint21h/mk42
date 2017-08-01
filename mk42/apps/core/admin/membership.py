@@ -40,8 +40,6 @@ class MembershipAdmin(admin.ModelAdmin):
         """
 
         queryset.update(active=True)
-        # send email message 'approve membership in group'
-        queryset.user.approve_request_membership_email()
 
     activate.short_description = _("Activate selected memberships")
 

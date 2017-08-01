@@ -1,5 +1,5 @@
 {# mk42 #}
-{# mk42/apps/core/templates/templated_email/group_registration.email #}
+{# mk42/apps/core/templates/templated_email/membership_approve.email #}
 
 {% load i18n %}
 
@@ -27,8 +27,6 @@
 
             <p>
                 {% trans "You approved in" %}  {{ membership.group }}{% trans "at" %} <a href="{{ protocol }}//{{ site.domain }}">{{ site.name }}</a>.
-
-                {% trans "If you do not do this please inform us." %}
             </p>
             <p>
                 {% trans "Yours" %},

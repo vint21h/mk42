@@ -1,5 +1,5 @@
 {# mk42 #}
-{# mk42/apps/core/templates/templated_email/group_registration.email #}
+{# mk42/apps/core/templates/templated_email/group_creation.email #}
 
 {% load i18n %}
 
