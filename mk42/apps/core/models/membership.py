@@ -50,22 +50,33 @@ class Membership(models.Model):
 
         return self.__unicode__()
 
+    def save(self, *args, **kwargs):
+        """
+        Save and send notification.
+        """
 
-    def send_request_membership_email(self):
+        old = Membership.objects.active(pk=self.pk)
+
+        if all([self.active != old, self.active]):
+            self.send_membership_approve_email()
+
+        super(Membership, self).save(*args, **kwargs)
+
+    def send_membership_creation_email(self):
         """
         Send the notification email to the user after request membership to the group.
         """
 
-        self.user.send_email("request_membership_email", {"membership": self, })
+        self.user.send_email("membership_creation", {"membership": self, })
 
-    def approve_request_membership_email(self):
+    def send_membership_approve_email(self):
         """
         Send the notification email to the user after approving request membership to the group.
         """
 
-        if self.user.active == True:
+        if self.active:
 
-            self.user.send_email("approve_membership_email", {"membership": self, })
+            self.user.send_email("membership_approve", {"membership": self, })
 
-# send notification
+# register signals
 post_save.connect(post_save_membership, sender=Membership)

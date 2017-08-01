@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mk42\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-27 11:22+0000\n"
+"POT-Creation-Date: 2017-08-01 08:06+0000\n"
 "PO-Revision-Date: 2017-06-13 19:25+0000\n"
 "Last-Translator: Alexei Andrushievich <vint21h@vint21h.pp.ua>\n"
 "Language-Team: Alexei Andrushievich <vint21h@vint21h.pp.ua>\n"
@@ -113,83 +113,83 @@ msgstr ""
 msgid "rsvp"
 msgstr ""
 
-#: templates/templated_email/approve_membership_email.email:6
-#: templates/templated_email/request-membership_email.email:6
-msgid "Approving membership at"
-msgstr ""
-
-#: templates/templated_email/approve_membership_email.email:10
-#: templates/templated_email/approve_membership_email.email:25
-#: templates/templated_email/create_group_email.email:10
-#: templates/templated_email/create_group_email.email:27
-#: templates/templated_email/request-membership_email.email:10
-#: templates/templated_email/request-membership_email.email:27
-msgid "Hello!"
-msgstr ""
-
-#: templates/templated_email/approve_membership_email.email:12
-#: templates/templated_email/approve_membership_email.email:29
-msgid "You approved in"
-msgstr ""
-
-#: templates/templated_email/approve_membership_email.email:12
-#: templates/templated_email/approve_membership_email.email:29
-#: templates/templated_email/create_group_email.email:12
-#: templates/templated_email/create_group_email.email:31
-#: templates/templated_email/request-membership_email.email:12
-#: templates/templated_email/request-membership_email.email:31
-msgid "at"
-msgstr ""
-
-#: templates/templated_email/approve_membership_email.email:14
-#: templates/templated_email/approve_membership_email.email:34
-#: templates/templated_email/create_group_email.email:16
-#: templates/templated_email/create_group_email.email:36
-#: templates/templated_email/request-membership_email.email:16
-#: templates/templated_email/request-membership_email.email:38
-msgid "Yours"
-msgstr ""
-
-#: templates/templated_email/approve_membership_email.email:16
-#: templates/templated_email/approve_membership_email.email:36
-#: templates/templated_email/create_group_email.email:18
-#: templates/templated_email/create_group_email.email:38
-#: templates/templated_email/request-membership_email.email:18
-#: templates/templated_email/request-membership_email.email:40
-msgid "The"
-msgstr ""
-
-#: templates/templated_email/approve_membership_email.email:16
-#: templates/templated_email/approve_membership_email.email:36
-#: templates/templated_email/create_group_email.email:18
-#: templates/templated_email/create_group_email.email:38
-#: templates/templated_email/request-membership_email.email:18
-#: templates/templated_email/request-membership_email.email:40
-msgid "team"
-msgstr ""
-
-#: templates/templated_email/approve_membership_email.email:31
-#: templates/templated_email/create_group_email.email:14
-#: templates/templated_email/create_group_email.email:33
-#: templates/templated_email/request-membership_email.email:35
-msgid "If you do not do this please inform us."
-msgstr ""
-
-#: templates/templated_email/create_group_email.email:6
+#: templates/templated_email/group_creation.email:6
 msgid "Group creation at"
 msgstr ""
 
-#: templates/templated_email/create_group_email.email:12
-#: templates/templated_email/create_group_email.email:31
+#: templates/templated_email/group_creation.email:10
+#: templates/templated_email/group_creation.email:27
+#: templates/templated_email/membership_approve.email:10
+#: templates/templated_email/membership_approve.email:25
+#: templates/templated_email/membership_creation.email:10
+#: templates/templated_email/membership_creation.email:27
+msgid "Hello!"
+msgstr ""
+
+#: templates/templated_email/group_creation.email:12
+#: templates/templated_email/group_creation.email:31
 msgid "You, or somebody else create group"
 msgstr ""
 
-#: templates/templated_email/request-membership_email.email:12
-#: templates/templated_email/request-membership_email.email:31
+#: templates/templated_email/group_creation.email:12
+#: templates/templated_email/group_creation.email:31
+#: templates/templated_email/membership_approve.email:12
+#: templates/templated_email/membership_approve.email:29
+#: templates/templated_email/membership_creation.email:12
+#: templates/templated_email/membership_creation.email:31
+msgid "at"
+msgstr ""
+
+#: templates/templated_email/group_creation.email:14
+#: templates/templated_email/group_creation.email:33
+#: templates/templated_email/membership_approve.email:31
+#: templates/templated_email/membership_creation.email:35
+msgid "If you do not do this please inform us."
+msgstr ""
+
+#: templates/templated_email/group_creation.email:16
+#: templates/templated_email/group_creation.email:36
+#: templates/templated_email/membership_approve.email:14
+#: templates/templated_email/membership_approve.email:34
+#: templates/templated_email/membership_creation.email:16
+#: templates/templated_email/membership_creation.email:38
+msgid "Yours"
+msgstr ""
+
+#: templates/templated_email/group_creation.email:18
+#: templates/templated_email/group_creation.email:38
+#: templates/templated_email/membership_approve.email:16
+#: templates/templated_email/membership_approve.email:36
+#: templates/templated_email/membership_creation.email:18
+#: templates/templated_email/membership_creation.email:40
+msgid "The"
+msgstr ""
+
+#: templates/templated_email/group_creation.email:18
+#: templates/templated_email/group_creation.email:38
+#: templates/templated_email/membership_approve.email:16
+#: templates/templated_email/membership_approve.email:36
+#: templates/templated_email/membership_creation.email:18
+#: templates/templated_email/membership_creation.email:40
+msgid "team"
+msgstr ""
+
+#: templates/templated_email/membership_approve.email:6
+#: templates/templated_email/membership_creation.email:6
+msgid "Approving membership at"
+msgstr ""
+
+#: templates/templated_email/membership_approve.email:12
+#: templates/templated_email/membership_approve.email:29
+msgid "You approved in"
+msgstr ""
+
+#: templates/templated_email/membership_creation.email:12
+#: templates/templated_email/membership_creation.email:31
 msgid "You made a request to the group"
 msgstr ""
 
-#: templates/templated_email/request-membership_email.email:14
-#: templates/templated_email/request-membership_email.email:33
+#: templates/templated_email/membership_creation.email:14
+#: templates/templated_email/membership_creation.email:33
 msgid "Please, wait for approval"
 msgstr ""

@@ -54,12 +54,12 @@ class Group(models.Model):
 
         return self.__unicode__()
 
-    def send_create_group_email(self):
+    def send_group_creation_email(self):
         """
         Send the notification email to the user after creating a group.
         """
 
-        self.owner.send_email("create_group_email", {"group": self, })
+        self.owner.send_email("group_creation", {"group": self, })
 
 
 # register signals

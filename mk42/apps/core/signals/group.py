@@ -20,7 +20,7 @@ def post_save_group(sender, instance, created, **kwargs):
     :param sender: sender model class.
     :type sender: object.
     :param instance: group model instance.
-    :type instance: mk42.apps.core.models.group.Group.
+    :type instance: mk42.apps.group.models.group.Group.
     :param created: is model instance created/edited.
     :type created: bool
     :param kwargs: additional args.
@@ -30,4 +30,4 @@ def post_save_group(sender, instance, created, **kwargs):
     if created:
 
         Membership.objects.get_or_create(user=instance.owner, group=instance, active=True)
-        instance.send_create_group_email()
+        instance.send_group_creation_email()

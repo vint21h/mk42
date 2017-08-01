@@ -13,7 +13,7 @@ __all__ = [
 
 def post_save_membership(sender, instance, created, **kwargs):
     """
-    end the notification email to the user after request membership to the group.
+    Send the notification email to the user after request membership to the group.
 
     :param sender: sender model class.
     :type sender: object.
@@ -27,4 +27,4 @@ def post_save_membership(sender, instance, created, **kwargs):
 
     if created:
 
-        instance.send_request_membership_email()
+        instance.send_membership_creation_email()
