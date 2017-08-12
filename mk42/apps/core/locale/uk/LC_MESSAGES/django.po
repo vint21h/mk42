@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mk42\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-08-01 08:44+0000\n"
+"POT-Creation-Date: 2017-08-12 16:42+0000\n"
 "PO-Revision-Date: 2017-06-13 19:25+0000\n"
 "Last-Translator: Alexei Andrushievich <vint21h@vint21h.pp.ua>\n"
 "Language-Team: Alexei Andrushievich <vint21h@vint21h.pp.ua>\n"
@@ -41,7 +41,7 @@ msgstr ""
 msgid "Core"
 msgstr ""
 
-#: models/event.py:29 models/group.py:31 models/membership.py:27
+#: models/event.py:29 models/group.py:31 models/membership.py:28
 #: models/rsvp.py:24
 msgid "ID"
 msgstr ""
@@ -54,7 +54,7 @@ msgstr ""
 msgid "description"
 msgstr ""
 
-#: models/event.py:32 models/group.py:45 models/membership.py:29
+#: models/event.py:32 models/group.py:45 models/membership.py:30
 msgid "group"
 msgstr ""
 
@@ -66,7 +66,7 @@ msgstr ""
 msgid "start date/time"
 msgstr ""
 
-#: models/event.py:35 models/group.py:36 models/membership.py:30
+#: models/event.py:35 models/group.py:36 models/membership.py:31
 #: models/rsvp.py:27
 msgid "created date/time"
 msgstr ""
@@ -95,7 +95,7 @@ msgstr ""
 msgid "updated date/time"
 msgstr ""
 
-#: models/group.py:38 models/membership.py:31
+#: models/group.py:38 models/membership.py:32
 msgid "active"
 msgstr ""
 
@@ -103,11 +103,11 @@ msgstr ""
 msgid "groups"
 msgstr ""
 
-#: models/membership.py:28 models/rsvp.py:25
+#: models/membership.py:29 models/rsvp.py:25
 msgid "user"
 msgstr ""
 
-#: models/membership.py:38 models/membership.py:39
+#: models/membership.py:39 models/membership.py:40
 msgid "membership"
 msgstr ""
 
@@ -130,15 +130,11 @@ msgstr ""
 
 #: templates/templated_email/group_creation.email:12
 #: templates/templated_email/group_creation.email:31
-msgid "You, or somebody else create group"
+msgid "You, or somebody else create group "
 msgstr ""
 
 #: templates/templated_email/group_creation.email:12
 #: templates/templated_email/group_creation.email:31
-#: templates/templated_email/membership_approve.email:12
-#: templates/templated_email/membership_approve.email:29
-#: templates/templated_email/membership_creation.email:12
-#: templates/templated_email/membership_creation.email:31
 msgid "at"
 msgstr ""
 
@@ -180,7 +176,12 @@ msgstr ""
 
 #: templates/templated_email/membership_approve.email:12
 #: templates/templated_email/membership_approve.email:29
-msgid "You approved in"
+msgid "Your membership in the group "
+msgstr ""
+
+#: templates/templated_email/membership_approve.email:12
+#: templates/templated_email/membership_approve.email:29
+msgid "is confirmed."
 msgstr ""
 
 #: templates/templated_email/membership_creation.email:6
@@ -189,7 +190,7 @@ msgstr ""
 
 #: templates/templated_email/membership_creation.email:12
 #: templates/templated_email/membership_creation.email:31
-msgid "You sent a request to join the group"
+msgid "You requested membership in the group "
 msgstr ""
 
 #: templates/templated_email/membership_creation.email:14

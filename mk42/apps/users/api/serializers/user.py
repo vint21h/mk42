@@ -62,16 +62,18 @@ class UserSerializer(serializers.ModelSerializer):
             "url",
         ]
 
-    def post_save(self, obj, created=False):
+    def create(self, validated_data):
         """
         On creation, replace the raw password with a hashed version.
 
-        :param obj: user model instance.
-        :type obj: mk42.apps.users.models.user.User.
-        :param created: is object created.
-        :type created: bool.
+        :param validated_data: serializer validated data.
+        :type validated_data: dict.
+        :return: user model instance.
+        :rtype: mk42.apps.users.models.user.User.
         """
 
-        if created:
-            obj.set_password(obj.password)
-            obj.save()
+        obj = super(UserSerializer, self).create(validated_data=validated_data)
+        obj.set_password(obj.password)
+        obj.save()
+
+        return obj

@@ -10,6 +10,7 @@ from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from django.conf import settings
 from django.db.models.signals import post_save
+
 from mk42.apps.core.managers.membership import MembershipManager
 from mk42.apps.core.signals.membership import post_save_membership
 
@@ -57,7 +58,8 @@ class Membership(models.Model):
 
         old = Membership.objects.active(pk=self.pk)
 
-        if all([self.active != old, self.active]):
+        if all([self.active, self.active != old.active, ]):
+
             self.send_membership_approve_email()
 
         super(Membership, self).save(*args, **kwargs)

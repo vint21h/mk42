@@ -9,7 +9,7 @@
 
     {% trans "Hello!" %}
 
-    {% trans "You sent a request to join the group" %} {{ membership.group }} {% trans "at" %} {{ protocol }}//{{ site.domain }}
+    {% trans "You requested membership in the group " %} {{ membership.group }}
 
     {% trans "Please, wait for confirmation" %}
 
@@ -28,7 +28,7 @@
             </h1>
 
             <p>
-                {% trans "You sent a request to join the group" %}  {{ membership.group }}{% trans "at" %} <a href="{{ protocol }}//{{ site.domain }}">{{ site.name }}</a>.
+                {% trans "You requested membership in the group " %} {{ membership.group }}
 
                 {% trans "Please, wait for confirmation" %}
             </p>
