@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mk42\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-24 22:36+0000\n"
+"POT-Creation-Date: 2017-08-17 10:16+0300\n"
 "PO-Revision-Date: 2017-07-24 22:20+0000\n"
 "Last-Translator: Alexei Andrushievich <vint21h@vint21h.pp.ua>\n"
 "Language-Team: English <vint21h@vint21h.pp.ua>\n"
@@ -15,11 +15,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: templates/base.html:19 templates/base.html:20
-#: templates/mk42/includes/meta/title.html:6
+#: mk42/templates/base.html:19 mk42/templates/base.html:20
+#: mk42/templates/mk42/includes/meta/title.html:6
 msgid "MK42"
 msgstr ""
 
-#: templates/mk42/includes/noscript.html:9
+#: mk42/templates/mk42/includes/noscript.html:9
 msgid "To work with this site enable JavaScript"
 msgstr ""

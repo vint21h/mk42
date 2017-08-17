@@ -28,22 +28,22 @@ class Group(models.Model):
     Group model.
     """
 
-    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False, verbose_name=_("ID"))
-    name = models.CharField(verbose_name=_("name"), max_length=256, db_index=True, unique=True)
-    slug = AutoSlugField(verbose_name=_("slug"), populate_from="name", max_length=256, default="", blank=True, db_index=True, editable=True, help_text=_("overwrite in creation"))
-    owner = models.ForeignKey(settings.AUTH_USER_MODEL, verbose_name=_("owner"), db_index=True, related_name="owned")
-    description = RedactorField(verbose_name=_("description"), blank=True, null=True, db_index=True)
-    created = models.DateTimeField(verbose_name=_("created date/time"), blank=True, null=True, db_index=True, auto_now_add=True)
-    updated = models.DateTimeField(verbose_name=_("updated date/time"), blank=True, null=True, db_index=True, auto_now=True)
-    active = models.BooleanField(verbose_name=_("active"), db_index=True, default=True)
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False, verbose_name=_(u"ID"))
+    name = models.CharField(verbose_name=_(u"name"), max_length=256, db_index=True, unique=True)
+    slug = AutoSlugField(verbose_name=_(u"slug"), populate_from="name", max_length=256, default="", blank=True, db_index=True, editable=True, help_text=_(u"overwrite in creation"))
+    owner = models.ForeignKey(settings.AUTH_USER_MODEL, verbose_name=_(u"owner"), db_index=True, related_name="owned")
+    description = RedactorField(verbose_name=_(u"description"), blank=True, null=True, db_index=True)
+    created = models.DateTimeField(verbose_name=_(u"created date/time"), blank=True, null=True, db_index=True, auto_now_add=True)
+    updated = models.DateTimeField(verbose_name=_(u"updated date/time"), blank=True, null=True, db_index=True, auto_now=True)
+    active = models.BooleanField(verbose_name=_(u"active"), db_index=True, default=True)
 
     objects = GroupManager()
 
     class Meta:
 
         app_label = "core"
-        verbose_name = _("group")
-        verbose_name_plural = _("groups")
+        verbose_name = _(u"group")
+        verbose_name_plural = _(u"groups")
         ordering = ["-created", ]
 
     def __unicode__(self):

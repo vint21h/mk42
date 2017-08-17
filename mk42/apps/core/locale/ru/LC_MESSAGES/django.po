@@ -1,21 +1,24 @@
-# mk42
-# mk42/apps/core/locale/uk/LC_MESSAGES/django.po
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: mk42\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-08-17 10:17+0300\n"
-"PO-Revision-Date: 2017-06-13 19:25+0000\n"
-"Last-Translator: Alexei Andrushievich <vint21h@vint21h.pp.ua>\n"
-"Language-Team: Alexei Andrushievich <vint21h@vint21h.pp.ua>\n"
-"Language: uk\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
 
 #: mk42/apps/core/admin/event.py:29 mk42/apps/core/admin/group.py:31
 #: mk42/apps/core/admin/membership.py:29 mk42/apps/core/admin/rsvp.py:28
@@ -24,19 +27,19 @@ msgstr "Другие"
 
 #: mk42/apps/core/admin/group.py:46
 msgid "Activate selected groups"
-msgstr "Активувати вибрані групи"
+msgstr "Активировать выбранные группы"
 
 #: mk42/apps/core/admin/group.py:60
 msgid "Deactivate selected groups"
-msgstr "Деактивувати вибрані групи"
+msgstr "Деативировать выбранные группы"
 
 #: mk42/apps/core/admin/membership.py:44
 msgid "Activate selected memberships"
-msgstr "Активувати вибраних учасників"
+msgstr "Активировать выбранного члена"
 
 #: mk42/apps/core/admin/membership.py:58
 msgid "Deactivate selected memberships"
-msgstr "Деактивувати вибраних учасників"
+msgstr "Деактивировать выбранного члена"
 
 #: mk42/apps/core/apps.py:23
 msgid "Core"
@@ -49,37 +52,37 @@ msgstr "ID"
 
 #: mk42/apps/core/models/event.py:30 mk42/apps/core/models/group.py:32
 msgid "name"
-msgstr "назва" #или имя?
+msgstr "название"
 
 #: mk42/apps/core/models/event.py:31 mk42/apps/core/models/group.py:35
 msgid "description"
-msgstr "опис"
+msgstr "описание"
 
 #: mk42/apps/core/models/event.py:32 mk42/apps/core/models/group.py:45
 #: mk42/apps/core/models/membership.py:27
 msgid "group"
-msgstr "група"
+msgstr "группа"
 
 #: mk42/apps/core/models/event.py:33
 msgid "address"
-msgstr "адреса"
+msgstr "адрес"
 
 #: mk42/apps/core/models/event.py:34 mk42/apps/core/models/event.py:36
 msgid "start date/time"
-msgstr "дата/час початку"
+msgstr "Дата/время начала"
 
 #: mk42/apps/core/models/event.py:35 mk42/apps/core/models/group.py:36
 #: mk42/apps/core/models/membership.py:28 mk42/apps/core/models/rsvp.py:27
 msgid "created date/time"
-msgstr "дата/час cтворення"
+msgstr "Дата/время создания"
 
 #: mk42/apps/core/models/event.py:43 mk42/apps/core/models/rsvp.py:26
 msgid "event"
-msgstr "подія"
+msgstr "мероприятие"
 
 #: mk42/apps/core/models/event.py:44
 msgid "events"
-msgstr "події"
+msgstr "мероприятия"
 
 #: mk42/apps/core/models/group.py:33
 msgid "slug"
@@ -87,27 +90,27 @@ msgstr "slug"
 
 #: mk42/apps/core/models/group.py:33
 msgid "overwrite in creation"
-msgstr "перезаписати створення"
+msgstr "перезаписать создание"
 
 #: mk42/apps/core/models/group.py:34
 msgid "owner"
-msgstr "власник"
+msgstr "владелец"
 
 #: mk42/apps/core/models/group.py:37
 msgid "updated date/time"
-msgstr "оновленна дата/час"
+msgstr "обновленная дата/время"
 
 #: mk42/apps/core/models/group.py:38 mk42/apps/core/models/membership.py:29
 msgid "active"
-msgstr "активувати"
+msgstr "активировать"
 
 #: mk42/apps/core/models/group.py:46
 msgid "groups"
-msgstr "група"
+msgstr "группы"
 
 #: mk42/apps/core/models/membership.py:26 mk42/apps/core/models/rsvp.py:25
 msgid "user"
-msgstr "член"
+msgstr "участник"
 
 #: mk42/apps/core/models/membership.py:36
 #: mk42/apps/core/models/membership.py:37
