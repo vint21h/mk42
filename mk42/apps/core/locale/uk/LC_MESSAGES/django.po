@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mk42\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-08-12 16:42+0000\n"
+"POT-Creation-Date: 2017-08-18 08:19+0000\n"
 "PO-Revision-Date: 2017-06-13 19:25+0000\n"
 "Last-Translator: Alexei Andrushievich <vint21h@vint21h.pp.ua>\n"
 "Language-Team: Alexei Andrushievich <vint21h@vint21h.pp.ua>\n"
@@ -130,12 +130,12 @@ msgstr ""
 
 #: templates/templated_email/group_creation.email:12
 #: templates/templated_email/group_creation.email:31
-msgid "You, or somebody else create group "
+msgid "You or somebody else created group "
 msgstr ""
 
 #: templates/templated_email/group_creation.email:12
 #: templates/templated_email/group_creation.email:31
-msgid "at"
+msgid " at "
 msgstr ""
 
 #: templates/templated_email/group_creation.email:14
@@ -181,7 +181,7 @@ msgstr ""
 
 #: templates/templated_email/membership_approve.email:12
 #: templates/templated_email/membership_approve.email:29
-msgid "is confirmed."
+msgid " is confirmed."
 msgstr ""
 
 #: templates/templated_email/membership_creation.email:6
@@ -190,7 +190,7 @@ msgstr ""
 
 #: templates/templated_email/membership_creation.email:12
 #: templates/templated_email/membership_creation.email:31
-msgid "You requested membership in the group "
+msgid "You are requesting for membership in the group "
 msgstr ""
 
 #: templates/templated_email/membership_creation.email:14

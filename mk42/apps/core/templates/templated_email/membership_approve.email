@@ -9,7 +9,7 @@
 
     {% trans "Hello!" %}
 
-    {% trans "Your membership in the group " %} {{ membership.group }} {% trans "is confirmed." %}
+    {% trans "Your membership in the group " %} {{ membership.group }} {% trans " is confirmed." %}
 
     {% trans "Yours" %},
 
@@ -26,7 +26,7 @@
             </h1>
 
             <p>
-                {% trans "Your membership in the group " %} {{ membership.group }} {% trans "is confirmed." %}
+                {% trans "Your membership in the group " %} {{ membership.group }} {% trans " is confirmed." %}
             </p>
             <p>
                 {% trans "Yours" %},

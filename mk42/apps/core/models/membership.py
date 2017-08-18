@@ -56,7 +56,7 @@ class Membership(models.Model):
         Save and send notification.
         """
 
-        old = Membership.objects.active(pk=self.pk)
+        old = Membership.objects.get(pk=self.pk)
 
         if all([self.active, self.active != old.active, ]):
 

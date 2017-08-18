@@ -9,7 +9,7 @@
 
     {% trans "Hello!" %}
 
-    {% trans "You requested membership in the group " %} {{ membership.group }}
+    {% trans "You are requesting for membership in the group " %} {{ membership.group }}
 
     {% trans "Please, wait for confirmation" %}
 
@@ -28,7 +28,7 @@
             </h1>
 
             <p>
-                {% trans "You requested membership in the group " %} {{ membership.group }}
+                {% trans "You are requesting for membership in the group " %} {{ membership.group }}
 
                 {% trans "Please, wait for confirmation" %}
             </p>

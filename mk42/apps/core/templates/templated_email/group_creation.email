@@ -9,7 +9,7 @@
 
     {% trans "Hello!" %}
 
-    {% trans "You, or somebody else create group " %} {{ group.name }} {% trans "at" %} {{ protocol }}//{{ site.domain }}
+    {% trans "You or somebody else created group " %} {{ group.name }} {% trans " at " %} {{ protocol }}//{{ site.domain }}
 
     {% trans "If you do not do this please inform us." %}
 
@@ -28,7 +28,7 @@
             </h1>
 
             <p>
-                {% trans "You, or somebody else create group " %} {{ group.name }} {% trans "at" %} <a href="{{ protocol }}//{{ site.domain }}">{{ site.name }}</a>.
+                {% trans "You or somebody else created group " %} {{ group.name }} {% trans " at " %} <a href="{{ protocol }}//{{ site.domain }}">{{ site.name }}</a>.
 
                 {% trans "If you do not do this please inform us." %}
             </p>
