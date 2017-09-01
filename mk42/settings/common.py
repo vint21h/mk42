@@ -67,7 +67,6 @@ REDIS_CONNECTION = {
     "password": REDIS_PASSWORD,
 }
 
-# apps
 INSTALLED_APPS = [
     "django_admin_env_notice",  # not right way, but working template overriding
     # django
@@ -80,8 +79,6 @@ INSTALLED_APPS = [
     "django.contrib.sites",
     "django.contrib.sitemaps",
     # third part
-    # locale_url
-    "localeurl",
     "sitemetrics",
     "djcopyright",
     "robots",
@@ -109,6 +106,7 @@ INSTALLED_APPS = [
     "mk42.apps.users",
     "mk42.apps.core",
 ]
+# apps
 
 MIDDLEWARE = [
     "corsheaders.middleware.CorsMiddleware",  # must go first of 'django.middleware.common.CommonMiddleware'.
@@ -176,19 +174,23 @@ gettext = lambda s: s
 LANGUAGES = (
     ("en", "English"),
     ("uk", "Українська"),
-    ("ru", "Русский")
+    #("ru", "Русский")
 )
 DEFAULT_LANGUAGE = "en"
 TIME_ZONE = "UTC"
 USE_I18N = True
 USE_L10N = True
 USE_TZ = True
-LOCALE_PATHS = (os.path.join(BASE_DIR, NAME, "locale").replace("\\", "/"),)
+LOCALE_PATHS = (
+    os.path.join(BASE_DIR, NAME, "locale").replace("\\", "/"),
+)
 
 # static/media settings
 MEDIA_ROOT = os.path.join(BASE_DIR, "media").replace("\\", "/")
 STATIC_ROOT = os.path.join(BASE_DIR, "static").replace("\\", "/")
-STATICFILES_DIRS = (os.path.join(BASE_DIR, NAME, "static").replace("\\", "/"),)
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, NAME, "static").replace("\\", "/"),
+)
 STATICFILES_FINDERS = (
     # django
     "django.contrib.staticfiles.finders.FileSystemFinder",

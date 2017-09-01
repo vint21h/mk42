@@ -14,4 +14,5 @@ class Index(TemplateView):
     """
     Index view.
     """
+
     template_name = "mk42/index.html"

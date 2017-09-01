@@ -95,7 +95,7 @@ msgstr "власник"
 
 #: mk42/apps/core/models/group.py:37
 msgid "updated date/time"
-msgstr "оновленна дата/час"
+msgstr "дата/час оновлення"
 
 #: mk42/apps/core/models/group.py:38 mk42/apps/core/models/membership.py:29
 msgid "active"
@@ -107,7 +107,7 @@ msgstr "група"
 
 #: mk42/apps/core/models/membership.py:26 mk42/apps/core/models/rsvp.py:25
 msgid "user"
-msgstr "член"
+msgstr "користувач"
 
 #: mk42/apps/core/models/membership.py:36
 #: mk42/apps/core/models/membership.py:37

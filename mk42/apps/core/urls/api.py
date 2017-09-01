@@ -37,7 +37,5 @@ api = [
     url(r"^api/membership/my/active/$", membership__my__active, name="group--my--active"),
     url(r"^api/membership/my/inactive\.(?P<format>[a-z0-9]+)/?$", membership__my__inactive, name="membership--my--inactive"),
     url(r"^api/membership/my/inactive/$", membership__my__inactive, name="membership--my--inactive"),
-    url(r'^i18n/', include('django.conf.urls.i18n')),
     url(r"^api/", include(router.urls)),
-
 ]
