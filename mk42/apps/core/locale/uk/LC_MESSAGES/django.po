@@ -20,166 +20,166 @@ msgstr ""
 #: admin/event.py:29 admin/group.py:31 admin/log.py:28 admin/membership.py:29
 #: admin/rsvp.py:28
 msgid "Other"
-msgstr ""
+msgstr "Інше"
 
 #: admin/group.py:46
 msgid "Activate selected groups"
-msgstr ""
+msgstr "Активувати обрані групи"
 
 #: admin/group.py:60
 msgid "Deactivate selected groups"
-msgstr ""
+msgstr "Деактивувати обрані групи"
 
 #: admin/membership.py:44
 msgid "Activate selected memberships"
-msgstr ""
+msgstr "Активувати обраних учасників"
 
 #: admin/membership.py:58
 msgid "Deactivate selected memberships"
-msgstr ""
+msgstr "Деактивувати обраних учасників"
 
 #: api/permissions/event.py:73
 msgid "Invalid dates."
-msgstr ""
+msgstr "Невірна дата"
 
 #: api/serializers/event.py:27
 msgid "status"
-msgstr ""
+msgstr "статус"
 
 #: apps.py:23
 msgid "Core"
-msgstr ""
+msgstr "Ядро"
 
 #: constants.py:22
 msgid "Pending"
-msgstr ""
+msgstr "Очікуйте"
 
 #: constants.py:23
 msgid "Canceled"
-msgstr ""
+msgstr "Скасовано"
 
 #: constants.py:24
 msgid "Ongoing"
-msgstr ""
+msgstr "Відбувається"
 
 #: constants.py:25
 msgid "Finished"
-msgstr ""
+msgstr "Закінчено"
 
 #: models/event.py:43 models/group.py:31 models/log.py:35
 #: models/membership.py:25 models/rsvp.py:24
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #: models/event.py:44 models/group.py:32
 msgid "name"
-msgstr ""
+msgstr "назва"
 
 #: models/event.py:45 models/group.py:35
 msgid "description"
-msgstr ""
+msgstr "опис"
 
 #: models/event.py:46 models/group.py:45 models/membership.py:27
 msgid "group"
-msgstr ""
+msgstr "група"
 
 #: models/event.py:47
 msgid "address"
-msgstr ""
+msgstr "адреса"
 
 #: models/event.py:48 models/event.py:51
 msgid "start date/time"
-msgstr ""
+msgstr "дата/час початку"
 
 #: models/event.py:49
 msgid "end date/time"
-msgstr ""
+msgstr "дата/час закінчення"
 
 #: models/event.py:50 models/group.py:36 models/log.py:38
 #: models/membership.py:28 models/rsvp.py:27
 msgid "created date/time"
-msgstr ""
+msgstr "дата/час cтворення"
 
 #: models/event.py:83 models/log.py:36 models/rsvp.py:26
 msgid "event"
-msgstr ""
+msgstr "подія"
 
 #: models/event.py:84
 msgid "events"
-msgstr ""
+msgstr "події"
 
 #: models/group.py:33
 msgid "slug"
-msgstr ""
+msgstr "слаг"
 
 #: models/group.py:33
 msgid "overwrite in creation"
-msgstr ""
+msgstr "перезаписати створення"
 
 #: models/group.py:34
 msgid "owner"
-msgstr ""
+msgstr "власник"
 
 #: models/group.py:37
 msgid "updated date/time"
-msgstr ""
+msgstr "дата/час оновлення"
 
 #: models/group.py:38 models/membership.py:29
 msgid "active"
-msgstr ""
+msgstr "активний"
 
 #: models/group.py:46
 msgid "groups"
-msgstr ""
+msgstr "група"
 
 #: models/log.py:44
 msgid "event log"
-msgstr ""
+msgstr "журнал події"
 
 #: models/log.py:45
 msgid "event logs"
-msgstr ""
+msgstr "журнал подій"
 
 #: models/membership.py:26 models/rsvp.py:25
 msgid "user"
-msgstr ""
+msgstr "користувач"
 
 #: models/membership.py:36 models/membership.py:37
 msgid "membership"
-msgstr ""
+msgstr "членство"
 
 #: models/rsvp.py:33 models/rsvp.py:34
 msgid "rsvp"
-msgstr ""
+msgstr "rsvp"
 
 #: templates/templated_email/create_group_email.email:6
 msgid "Group creation at"
-msgstr ""
+msgstr "Створення групи на"
 
 #: templates/templated_email/create_group_email.email:10
 #: templates/templated_email/create_group_email.email:27
 msgid "Hello!"
-msgstr ""
+msgstr "Здравствуйте"
 
 #: templates/templated_email/create_group_email.email:12
 #: templates/templated_email/create_group_email.email:31
 msgid "You, or somebody else create group"
-msgstr ""
+msgstr "Ви або хтось інший створює групу"
 
 #: templates/templated_email/create_group_email.email:12
 #: templates/templated_email/create_group_email.email:31
 msgid "at"
-msgstr ""
+msgstr "в"
 
 #: templates/templated_email/create_group_email.email:14
 #: templates/templated_email/create_group_email.email:33
 msgid "If you do not do this please inform us."
-msgstr ""
+msgstr "Якщо ви цього не зробите, будь ласка, повідомте нас"
 
 #: templates/templated_email/create_group_email.email:16
 #: templates/templated_email/create_group_email.email:36
 msgid "Yours"
-msgstr ""
+msgstr "Ваша"
 
 #: templates/templated_email/create_group_email.email:18
 #: templates/templated_email/create_group_email.email:38
@@ -189,12 +189,12 @@ msgstr ""
 #: templates/templated_email/create_group_email.email:18
 #: templates/templated_email/create_group_email.email:38
 msgid "team"
-msgstr ""
+msgstr "команда"
 
 #: validators/event.py:29
 msgid "Start of new event can't be in the past"
-msgstr ""
+msgstr "Початок нової події не може бути минулим"
 
 #: validators/event.py:42
 msgid "End of new event can't be in the past"
-msgstr ""
+msgstr "Кінець нової події не може бути минулим"
