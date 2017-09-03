@@ -113,8 +113,8 @@ msgid "slug"
 msgstr "слаг"
 
 #: models/group.py:33
-msgid "overwrite in creation"
-msgstr "перезаписати створення"
+msgid "overwrites during creation"
+msgstr "перезаписується під час створення"
 
 #: models/group.py:34
 msgid "owner"

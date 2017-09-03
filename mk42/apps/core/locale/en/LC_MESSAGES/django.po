@@ -111,7 +111,7 @@ msgid "slug"
 msgstr ""
 
 #: models/group.py:33
-msgid "overwrite in creation"
+msgid "overwrites during creation"
 msgstr ""
 
 #: models/group.py:34
