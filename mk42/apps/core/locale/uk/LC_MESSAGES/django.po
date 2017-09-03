@@ -126,7 +126,7 @@ msgstr "дата/час оновлення"
 
 #: models/group.py:38 models/membership.py:29
 msgid "active"
-msgstr "активний"
+msgstr "активна"
 
 #: models/group.py:46
 msgid "groups"
@@ -146,7 +146,7 @@ msgstr "користувач"
 
 #: models/membership.py:36 models/membership.py:37
 msgid "membership"
-msgstr "членство"
+msgstr "участь у групі"
 
 #: models/rsvp.py:33 models/rsvp.py:34
 msgid "rsvp"
