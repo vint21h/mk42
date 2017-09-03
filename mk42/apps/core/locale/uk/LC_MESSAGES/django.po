@@ -130,7 +130,7 @@ msgstr "активний"
 
 #: models/group.py:46
 msgid "groups"
-msgstr "група"
+msgstr "групи"
 
 #: models/log.py:44
 msgid "event log"
