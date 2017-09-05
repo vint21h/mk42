@@ -8,8 +8,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-08-26 00:50+0000\n"
 "PO-Revision-Date: 2017-06-13 19:25+0000\n"
-"Last-Translator: Alexei Andrushievich <vint21h@vint21h.pp.ua>\n"
-"Language-Team: Alexei Andrushievich <vint21h@vint21h.pp.ua>\n"
+"Last-Translator: Kirill Boev <forboev@gmail.com>\n"
+"Language-Team: Kirill Boev <forboev@gmail.com>, Alexei Andrushievich <vint21h@vint21h.pp.ua>\n"
 "Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -171,7 +171,7 @@ msgstr ""
 
 #: templates/templated_email/create_group_email.email:14
 #: templates/templated_email/create_group_email.email:33
-msgid "If you do not do this please inform us."
+msgid "If you don't do this please inform us."
 msgstr ""
 
 #: templates/templated_email/create_group_email.email:16

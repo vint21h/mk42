@@ -173,7 +173,7 @@ msgstr "в"
 
 #: templates/templated_email/create_group_email.email:14
 #: templates/templated_email/create_group_email.email:33
-msgid "If you do not do this please inform us."
+msgid "If you don't do this please inform us."
 msgstr "Якщо ви цього не робили, будь ласка, повідомте нас"
 
 #: templates/templated_email/create_group_email.email:16
