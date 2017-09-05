@@ -8,8 +8,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-08-26 00:51+0000\n"
 "PO-Revision-Date: 2017-06-13 19:25+0000\n"
-"Last-Translator: Alexei Andrushievich <vint21h@vint21h.pp.ua>\n"
-"Language-Team: Alexei Andrushievich <vint21h@vint21h.pp.ua>\n"
+"Last-Translator: Kirill Boev <forboev@gmail.com>\n"
+"Language-Team: Kirill Boev <forboev@gmail.com>, Alexei Andrushievich <vint21h@vint21h.pp.ua>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -52,7 +52,7 @@ msgstr "Ядро"
 
 #: constants.py:22
 msgid "Pending"
-msgstr "Очікуйте"
+msgstr "Очікується"
 
 #: constants.py:23
 msgid "Canceled"
@@ -118,7 +118,7 @@ msgstr "перезаписується під час створення"
 
 #: models/group.py:34
 msgid "owner"
-msgstr "власник"
+msgstr "творець"
 
 #: models/group.py:37
 msgid "updated date/time"
@@ -164,7 +164,7 @@ msgstr "Здравствуйте"
 #: templates/templated_email/create_group_email.email:12
 #: templates/templated_email/create_group_email.email:31
 msgid "You, or somebody else create group"
-msgstr "Ви або хтось інший створює групу"
+msgstr "Ви або хтось інший створив групу"
 
 #: templates/templated_email/create_group_email.email:12
 #: templates/templated_email/create_group_email.email:31
@@ -174,7 +174,7 @@ msgstr "в"
 #: templates/templated_email/create_group_email.email:14
 #: templates/templated_email/create_group_email.email:33
 msgid "If you do not do this please inform us."
-msgstr "Якщо ви цього не зробите, будь ласка, повідомте нас"
+msgstr "Якщо ви цього не робили, будь ласка, повідомте нас"
 
 #: templates/templated_email/create_group_email.email:16
 #: templates/templated_email/create_group_email.email:36
@@ -193,8 +193,8 @@ msgstr "команда"
 
 #: validators/event.py:29
 msgid "Start of new event can't be in the past"
-msgstr "Початок нової події не може бути минулим"
+msgstr "Початок нової події не може бути минулому"
 
 #: validators/event.py:42
 msgid "End of new event can't be in the past"
-msgstr "Кінець нової події не може бути минулим"
+msgstr "Кінець нової події не може бути минулому"
