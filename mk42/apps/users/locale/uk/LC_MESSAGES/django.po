@@ -8,8 +8,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-09-07 05:16+0000\n"
 "PO-Revision-Date: 2017-06-13 19:25+0000\n"
-"Last-Translator: Alexei Andrushievich <vint21h@vint21h.pp.ua>\n"
-"Language-Team: Alexei Andrushievich <vint21h@vint21h.pp.ua>\n"
+"Last-Translator: Kirill Boev <forboev@gmail.com>\n"
+"Language-Team: Kirill Boev <forboev@gmail.com>, Alexei Andrushievich <vint21h@vint21h.pp.ua>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,86 +19,84 @@ msgstr ""
 
 #: admin/user.py:46
 msgid "Personal info"
-msgstr ""
+msgstr "Особиста інформація"
 
 #: admin/user.py:47
 msgid "Permissions"
-msgstr ""
+msgstr "Дозволи"
 
 #: admin/user.py:48
 msgid "Important dates"
-msgstr ""
+msgstr "Важливі дати"
 
 #: admin/user.py:49
 msgid "Settings"
-msgstr ""
+msgstr "Налаштування"
 
 #: admin/user.py:68
-msgid ""
-"Clear all selected users sessions (logout from all logged in devices) (can "
-"take very long time)"
-msgstr ""
+msgid "Clear all selected users sessions (logout from all logged in devices) (can take very long time)"
+msgstr "Очистити всі сеанси обраних користувачів (вийти з усіх вхідних пристроїв) (може зайняти дуже багато часу)"
 
 #: api/serializers/user.py:26
 msgid "full name"
-msgstr ""
+msgstr "повне ім'я"
 
 #: api/serializers/user.py:27
 msgid "short name"
-msgstr ""
+msgstr "коротке ім'я"
 
 #: api/serializers/user.py:28 models/user.py:43
 msgid "country"
-msgstr ""
+msgstr "Країна"
 
 #: apps.py:23
 msgid "Users"
-msgstr ""
+msgstr "Користувачі"
 
 #: models/user.py:41
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #: models/user.py:42
 msgid "language"
-msgstr ""
+msgstr "мова"
 
 #: models/user.py:58
 msgid "user"
-msgstr ""
+msgstr "користувач"
 
 #: models/user.py:59
 msgid "users"
-msgstr ""
+msgstr "користувачі"
 
 #: templates/templated_email/registration.email:6
 msgid "Registration on"
-msgstr ""
+msgstr "Реєстрація в"
 
 #: templates/templated_email/registration.email:10
 #: templates/templated_email/registration.email:29
 msgid "Welcome to"
-msgstr ""
+msgstr "Ласкаво просимо до"
 
 #: templates/templated_email/registration.email:12
 #: templates/templated_email/registration.email:33
 msgid "You, or somebody else register at"
-msgstr ""
+msgstr "Ви або хтось інший зареєструвался на"
 
 #: templates/templated_email/registration.email:14
 #: templates/templated_email/registration.email:35
-msgid "If you do not do this please inform us."
-msgstr ""
+msgid "If you don't do this, please inform us."
+msgstr "Якщо ви цього не робили, будь ласка, повідомте про це нас"
 
 #: templates/templated_email/registration.email:16
 #: templates/templated_email/registration.email:37
-msgid "Enjoy working on"
-msgstr ""
+msgid "Enjoy working on" # предлагаю убрать working, многие просто не любят работать
+msgstr "Насолоджуйтесь роботою з"
 
 #: templates/templated_email/registration.email:18
 #: templates/templated_email/registration.email:40
 msgid "Yours"
-msgstr ""
+msgstr "Ваша"
 
 #: templates/templated_email/registration.email:20
 #: templates/templated_email/registration.email:42
@@ -108,4 +106,4 @@ msgstr ""
 #: templates/templated_email/registration.email:20
 #: templates/templated_email/registration.email:42
 msgid "team"
-msgstr ""
+msgstr "команда"

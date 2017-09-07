@@ -30,7 +30,7 @@ class Group(models.Model):
 
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False, verbose_name=_("ID"))
     name = models.CharField(verbose_name=_("name"), max_length=256, db_index=True, unique=True)
-    slug = AutoSlugField(verbose_name=_("slug"), populate_from="name", max_length=256, default="", blank=True, db_index=True, editable=True, help_text=_("overwrite in creation"))
+    slug = AutoSlugField(verbose_name=_("slug"), populate_from="name", max_length=256, default="", blank=True, db_index=True, editable=True, help_text=_("overwrites during creation"))
     owner = models.ForeignKey(settings.AUTH_USER_MODEL, verbose_name=_("owner"), db_index=True, related_name="owned")
     description = RedactorField(verbose_name=_("description"), blank=True, null=True, db_index=True)
     created = models.DateTimeField(verbose_name=_("created date/time"), blank=True, null=True, db_index=True, auto_now_add=True)

@@ -11,7 +11,7 @@
 
     {% trans "You, or somebody else register at" %} {{ protocol }}//{{ site.domain }}
 
-    {% trans "If you do not do this please inform us." %}
+    {% trans "If you don't do this please inform us." %}
 
     {% trans "Enjoy working on" %} {{ protocol }}//{{ site.domain }}
 
@@ -32,7 +32,7 @@
             <p>
                 {% trans "You, or somebody else register at" %} <a href="{{ protocol }}//{{ site.domain }}">{{ site.name }}</a>.
 
-                {% trans "If you do not do this please inform us." %}
+                {% trans "If you don't do this please inform us." %}
 
                 {% trans "Enjoy working on" %} <a href="{{ protocol }}//{{ site.domain }}">{{ site.name }}</a>.
             </p>
